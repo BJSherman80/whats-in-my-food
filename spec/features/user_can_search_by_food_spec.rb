@@ -9,7 +9,7 @@ feature "user can search for food" do
 
     fill_in :q, with: "sweet potatoes"
     click_on "Search"
-    expect(current_path).to eq(food_path)
+    expect(current_path).to eq("/foods")
 
     expect(page).to have_css(".food")
 
