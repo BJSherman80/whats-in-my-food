@@ -1,9 +1,9 @@
 require 'rails_helper'
 
 
-feature "user can search for house members" do
+feature "user can search for food" do
 
-  scenario "user submits valid state name" do
+  scenario "user submits valid food name" do
 
     visit '/'
 
