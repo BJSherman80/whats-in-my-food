@@ -1,0 +1,3 @@
+class FoodController < ApplicationCointroller
+
+end
