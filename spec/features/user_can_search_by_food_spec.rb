@@ -12,7 +12,7 @@ feature "user can search for food" do
     expect(current_path).to eq("/foods")
 
     expect(page).to have_css(".food")
-
+    save_and_open_page
     within(first(".food")) do
       expect(page).to have_css(".code")
       expect(page).to have_css(".description")

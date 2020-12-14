@@ -4,6 +4,9 @@
     <li class="code">Code: <%= food[:fdcId] %></li>
     <li class="description">Description: <%= food[:description] %></li>
     <li class="brand_owner">Owner: <%= food[:commonNames] %></li>
-    <li class="ingredients">Nutrients: <%= food[:foodNutrients].each { |nutrient| nutrient[:nutrientName] } %></li>
+    <li class="ingredients">Nutrients:
+      <% food[:foodNutrients].each do |nutrient|%>
+      <%= nutrient[:nutrientName] %></li>
+    <% end %>
   </ul>
   <% end %>

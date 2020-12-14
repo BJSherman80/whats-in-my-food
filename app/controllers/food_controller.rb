@@ -11,5 +11,6 @@ class FoodController < ApplicationController
     end
      json = JSON.parse(response.body, symbolize_names: true )
      @ten_foods = json[:foods].first(10)
+     binding.pry
   end
 end
