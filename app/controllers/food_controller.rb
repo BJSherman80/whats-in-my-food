@@ -9,7 +9,7 @@ class FoodController < ApplicationController
       f.params["api_key"] = ENV['FOOD_API_KEY']
       f.params['query'] = @food  
     end
-    @food_item = JSON.parse(response.body, symbolize_names: true )
-    binding.pry
+     json = JSON.parse(response.body, symbolize_names: true )
+     @ten_foods = json[:foods].first(10)
   end
 end
